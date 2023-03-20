@@ -31,7 +31,7 @@ public class Main {
 
         ImageIO.write(image, "png", f);
 
-        openFile(f);
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -45,9 +45,35 @@ public class Main {
 
        // File file=new File(Main.class.getResource("img/btn_login.png").getPath());
      //   openFile(file);
+
+        RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
+
+        long timeOut=10*1000;
+        long startTime = System.currentTimeMillis();
         String path= Main.class.getClassLoader().getResource("img/btn_login.png").toURI().getPath();
-        System.out.println(path);
-        openFile(new File(path));
+        FoundResult result = ImageUtil.foundImageInScreen(path);
+        while (!result.isFound()){
+
+            result = ImageUtil.foundImageInScreen(path);
+            Thread.sleep(1000);
+        }
+
+        //找到了
+        System.out.println("找到了 x="+result.getFoundX()+" y="+result.getFoundY());
+        //保存
+        String saveDir = getDesktop() + "\\auto360Image";
+        String fileName="found.png";
+        String savePath = ImageUtil.saveImageToPath(result.getFoundImage(), saveDir, fileName);
+        ImageUtil.showImage(new File(savePath));
+
+
+        long useTime=System.currentTimeMillis()-startTime;
+        System.out.println("耗时"+useTime+"毫秒");
+
+
+        //System.out.println(path);
+
+       // openFile(new File(path));
     }
 
     private static String getDesktop(){
@@ -57,11 +83,6 @@ public class Main {
         return com.getPath();
     }
 
-    private static void openFile(File f) throws IOException {
-        //自动打开
-        if (Desktop.isDesktopSupported()
-                && Desktop.getDesktop().isSupported(Desktop.Action.OPEN))
-            Desktop.getDesktop().open(f);
-    }
+
 
 }
