@@ -3,6 +3,7 @@ package com.zhuguohui;
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
+import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -45,7 +46,7 @@ public class Main {
 
        // File file=new File(Main.class.getResource("img/btn_login.png").getPath());
      //   openFile(file);
-
+        System.out.println("启动360加固助手");
         RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
 
         long timeOut=10*1000;
@@ -59,21 +60,38 @@ public class Main {
         }
 
         //找到了
-        System.out.println("找到了 x="+result.getFoundX()+" y="+result.getFoundY());
+
+//        showFoundResult(result);
+
+
+//        long useTime=System.currentTimeMillis()-startTime;
+//        System.out.println("耗时"+useTime+"毫秒");
+
+        System.out.println("开始登陆");
+        //模拟点击
+        Robot robot=new Robot();
+        int k=10;
+        //win10上有问题，多调几次确保成功
+        while((--k)>0)
+        {
+            robot.mouseMove(result.getCenterX(), result.getCenterY());
+        }
+
+        robot.delay(1000);
+        robot.mousePress(InputEvent.BUTTON1_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+        //System.out.println(path);
+
+       // openFile(new File(path));
+    }
+
+    private static void showFoundResult(FoundResult result) throws IOException {
         //保存
         String saveDir = getDesktop() + "\\auto360Image";
         String fileName="found.png";
         String savePath = ImageUtil.saveImageToPath(result.getFoundImage(), saveDir, fileName);
         ImageUtil.showImage(new File(savePath));
-
-
-        long useTime=System.currentTimeMillis()-startTime;
-        System.out.println("耗时"+useTime+"毫秒");
-
-
-        //System.out.println(path);
-
-       // openFile(new File(path));
     }
 
     private static String getDesktop(){

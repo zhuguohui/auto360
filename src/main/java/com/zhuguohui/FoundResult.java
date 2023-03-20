@@ -35,6 +35,14 @@ public class FoundResult {
         return foundX;
     }
 
+    public int getCenterX(){
+        return foundX+width/2;
+    }
+
+    public int getCenterY(){
+        return foundY+height/2;
+    }
+
     public int getFoundY() {
         return foundY;
     }

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/RunUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="完成图片识别功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +108,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679303908646</updated>
     </task>
+    <task id="LOCAL-00001" summary="完成图片识别功能">
+      <created>1679320709236</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679320709236</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +129,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成图片识别功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成图片识别功能" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -130,6 +140,11 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

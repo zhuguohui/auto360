@@ -107,8 +107,11 @@ public class ImageUtil {
         Graphics2D graphics = screen.createGraphics();
         graphics.setColor(Color.RED);
         graphics.drawRect(foundX,foundY,targetWidth,targetHeight);
-        graphics.dispose();
 
+        int centerX=foundX+targetWidth/2;
+        int centerY=foundY+targetHeight/2;
+        graphics.fillOval(centerX,centerY,10,10);
+        graphics.dispose();
         return screen;
     }
 
