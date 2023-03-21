@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="完成图片识别功能">
+    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="完成图片读取功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +16,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,31 +33,19 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/Inteillj Project/auto360/auto360/src/main/resources/img&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zhuguohui" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Inteillj Project\auto360\auto360\src\main\resources\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.zhuguohui.Main" />
-      <module name="auto360.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="auto360 [idea]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -89,10 +67,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.main" />
-      <item itemvalue="Gradle.auto360 [idea]" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.auto360 [idea]" />
@@ -108,12 +82,12 @@
       <option name="presentableId" value="Default" />
       <updated>1679303908646</updated>
     </task>
-    <task id="LOCAL-00001" summary="完成图片识别功能">
-      <created>1679320709236</created>
+    <task id="LOCAL-00001" summary="完成图片读取功能">
+      <created>1679307774551</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1679320709236</updated>
+      <updated>1679307774551</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -130,8 +104,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成图片识别功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成图片识别功能" />
+    <MESSAGE value="完成图片读取功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成图片读取功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -140,11 +114,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
