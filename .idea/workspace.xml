@@ -45,13 +45,20 @@
       <recent name="E:\Inteillj Project\auto360\auto360\src\main\resources\img" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.auto360">
+    <configuration name="auto360" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.zhuguohui.Main" />
+      <module name="auto360.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="auto360 [idea]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -67,6 +74,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.auto360" />
+      <item itemvalue="Gradle.auto360 [idea]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.auto360 [idea]" />
