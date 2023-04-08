@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="完成图片识别功能">
+    <list default="true" id="c7e1e68d-08ea-41d1-9658-faceade09e8f" name="Changes" comment="实现360自动登陆">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/action/ActionTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/action/Function1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/action/MockAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/action/OffsetTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/action/impl/ClickAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/btn_add_apk.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/FoundResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java" afterDir="false" />
@@ -23,6 +30,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,23 +43,24 @@
   </component>
   <component name="ProjectId" id="2NGwp6ci5qFGpiyygguCDebtpUJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Inteillj Project/auto360/auto360/src/main/resources/img&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "E:/Inteillj Project/auto360/auto360/src/main/resources/img",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zhuguohui" />
@@ -115,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679320709236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="实现360自动登陆">
+      <created>1679322331877</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679322331877</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,8 +146,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="完成图片识别功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成图片识别功能" />
+    <MESSAGE value="实现360自动登陆" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现360自动登陆" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -141,9 +159,44 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/ImageUtil.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="3" />
+          <line>87</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/action/impl/ClickAction.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zhuguohui/Main.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

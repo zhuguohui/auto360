@@ -69,6 +69,31 @@ public class ImageUtil {
         return true;
     }
 
+    /**
+     *
+     * @param resPath
+     * @param timeOut 超时时间，-1表示一直查找 ,单位毫秒
+     * @return
+     * @throws Exception
+     */
+    public static FoundResult foundImageInScreen(String resPath,long timeOut) throws Exception{
+        System.out.println("查找图片:"+resPath);
+        String path= Main.class.getClassLoader().getResource(resPath).toURI().getPath();
+        long statTime=System.currentTimeMillis();
+        FoundResult result = ImageUtil.foundImageInScreen(path);
+        while (!result.isFound()){
+            long useTime=System.currentTimeMillis()-statTime;
+            boolean isTimeOut=timeOut>=0&&useTime>timeOut;
+            if(isTimeOut){
+                throw new RuntimeException("在"+timeOut+"毫秒内没有在屏幕中找到图片:"+resPath);
+            }
+
+            result = ImageUtil.foundImageInScreen(path);
+            Thread.sleep(1000);
+        }
+        return result;
+    }
+
     public static FoundResult foundImageInScreen(String path) throws IOException {
         BufferedImage targetImage = ImageIO.read(new File(path));
         BufferedImage screen = ImageUtil.getScreen();

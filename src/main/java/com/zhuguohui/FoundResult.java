@@ -1,8 +1,10 @@
 package com.zhuguohui;
 
+import com.zhuguohui.action.ActionTarget;
+
 import java.awt.image.BufferedImage;
 
-public class FoundResult {
+public class FoundResult implements ActionTarget {
   private    int foundX=-1;
     private    int foundY=-1;
     private   int width;
@@ -53,5 +55,15 @@ public class FoundResult {
 
     public int getHeight() {
         return height;
+    }
+
+    @Override
+    public int getActionX() {
+        return getCenterX();
+    }
+
+    @Override
+    public int getActionY() {
+        return getCenterY();
     }
 }
