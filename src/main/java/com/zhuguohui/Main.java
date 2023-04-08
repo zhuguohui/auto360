@@ -52,7 +52,9 @@ public class Main {
         System.out.println("关闭360助手");
         RunUtil.executeCmd("taskkill /FI \"WINDOWTITLE eq 360加固助手\" /T /F");
         System.out.println("启动360加固助手");
-        RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
+        //RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
+        RunUtil.executeCmd("start E:\\TRS-WORK\\360jiagubao_windows_64\\360加固助手.exe");
+
 
         long timeOut=10*1000;
         long startTime = System.currentTimeMillis();
