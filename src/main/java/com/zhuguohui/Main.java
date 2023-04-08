@@ -2,6 +2,8 @@ package com.zhuguohui;
 
 import com.zhuguohui.action.OffsetTarget;
 import com.zhuguohui.action.impl.ClickAction;
+import com.zhuguohui.action.impl.EnterAction;
+import com.zhuguohui.action.impl.InputAction;
 
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileSystemView;
@@ -38,6 +40,26 @@ public class Main {
 
     }
 
+    public static void doSelectedApk() throws Exception {
+        String path="C:\\Users\\yhtx\\AndroidStudioProjects\\nmip_android\\app\\build\\outputs\\apk\\official\\release";
+        String fileName="温度新闻_official_v6.1.1_time_202303022239_sign.apk";
+        FoundResult result = ImageUtil.foundImageInScreen("img/win11_path_input.png", -1);
+        InputAction action=new InputAction("输入地址");
+        action.doAction(result,path,null,null);
+
+        EnterAction enterAction=new EnterAction("回车");
+        enterAction.doAction(null,null,null,null);
+        Thread.sleep(500);
+
+        FoundResult result2 = ImageUtil.foundImageInScreen("img/win11_file_input.png", -1);
+        InputAction action2=new InputAction("输入文件名");
+        action2.doAction(result2,fileName,null,null);
+
+        FoundResult result3 = ImageUtil.foundImageInScreen("img/win11_file_open.png", -1);
+        ClickAction clickAction=new ClickAction("点击打开文件");
+        clickAction.doAction(result3,null,null,null);
+    }
+
     public static void main(String[] args) throws Exception {
       /*  try {
             captureScreen(getDesktop()+"\\auto360Image","1.png");
@@ -53,7 +75,7 @@ public class Main {
         RunUtil.executeCmd("taskkill /FI \"WINDOWTITLE eq 360加固助手\" /T /F");
         System.out.println("启动360加固助手");
         //RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
-        RunUtil.executeCmd("start E:\\TRS-WORK\\360jiagubao_windows_64\\360加固助手.exe");
+        RunUtil.executeCmd("start E:\\360jiagubao_windows_64\\360加固助手.exe");
 
 
         long timeOut=10*1000;
@@ -64,6 +86,7 @@ public class Main {
             result = ImageUtil.foundImageInScreen(path);
             Thread.sleep(1000);
         }
+
 
         //找到了
 
@@ -80,6 +103,7 @@ public class Main {
 
         doAddApk();
 
+        doSelectedApk();
 
         //System.out.println(path);
 

@@ -47,7 +47,16 @@ public class ImageUtil {
         return robot.createScreenCapture(screenRectangle);
     }
 
-    public static boolean matchImage(int[][] screenPixels, int[][] targetPixels, int startX, int startY) {
+    /**
+     *
+     * @param screenPixels
+     * @param targetPixels
+     * @param startX
+     * @param startY
+     * @param minMatchRatio 最低的对比差异。0-1 1表示100%匹配
+     * @return
+     */
+    public static boolean matchImage(int[][] screenPixels, int[][] targetPixels, int startX, int startY,float minMatchRatio) {
         int height=targetPixels.length;
         int width=targetPixels[0].length;
         //使用关键点匹配来减少计算量。提高性能
@@ -56,13 +65,18 @@ public class ImageUtil {
 //        if(!p1.equals(p2)){
 //            return false;
 //        }
-
+        int pixelsCount=targetPixels[0].length*targetPixels.length;
+        int maxMisCount= (int) ((1-minMatchRatio)*pixelsCount);
+        int misMatchCount=0;
         for(int y=0;y<height;y++){
             for(int x=0;x<width;x++){
                 int targetP=targetPixels[y][x];
                 int screenP=screenPixels[y+startY][x+startX];
                 if(targetP!=screenP){
-                    return false;
+                    misMatchCount++;
+                    if(misMatchCount>=maxMisCount) {
+                        return false;
+                    }
                 }
             }
         }
@@ -110,7 +124,7 @@ public class ImageUtil {
         for(int y=0;y<scanHeight;y++){
             for(int x=0;x<scanWidth;x++){
                 //完全匹配
-                boolean isMath=ImageUtil.matchImage(screenPixels,targetPixels,x,y);
+                boolean isMath=ImageUtil.matchImage(screenPixels,targetPixels,x,y,0.95f);
                 if(isMath){
                     foundX=x;
                     foundY=y;

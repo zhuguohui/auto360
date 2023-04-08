@@ -17,7 +17,6 @@ public class ClickAction extends MockAction<Void> {
     @Override
     public void doAction(ActionTarget target, Void unused, Function1<Void> successCallBack, Function1<Throwable> errorCallBack) {
 
-        System.out.println("执行"+opName+"操作");
         int k=10;
         //win10上有问题，多调几次确保成功
         while((--k)>0)
